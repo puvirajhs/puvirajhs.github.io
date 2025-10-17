@@ -160,6 +160,7 @@
 			}
 		} */
 		@media (max-width: 768px) {
+
 			/* Style navbar when it contains a navbar-collapse with show class */
 			.navbar:has(.navbar-collapse.show) {
 				padding: 0.5rem 0;
@@ -842,8 +843,8 @@
 			position: fixed;
 			bottom: 30px;
 			right: 30px;
-			width: 60px;
-			height: 60px;
+			width: 40px;
+			height: 40px;
 			background: var(--primary-gradient);
 			color: white;
 			border: none;
@@ -1168,8 +1169,10 @@
 							Software Engineer & Innovator
 						</h3>
 						<p class="about-text">
-							I'm a passionate software engineer with over 5 years of experience crafting digital solutions
-							that make a difference. My journey from a curious trainee to a Development Team Lead has been
+							I'm a passionate software engineer with over 5 years of experience crafting digital
+							solutions
+							that make a difference. My journey from a curious trainee to a Development Team Lead has
+							been
 							fueled by an insatiable appetite for learning and innovation.
 						</p>
 						<p class="about-text">
@@ -1386,7 +1389,7 @@
 						<p class="timeline-description">
 							Managed and mentored a team of 8+ developers, oversaw project planning and execution,
 							conducted code reviews, and established development best practices. Successfully delivered
-							15+ major projects using Laravel, React, and Vue.js frameworks with 98% client satisfaction.
+							10+ major projects using Laravel, React, and Vue.js frameworks with 98% client satisfaction.
 						</p>
 					</div>
 				</div>
@@ -1413,7 +1416,7 @@
 						<div class="timeline-company">Hashtag Coders</div>
 						<p class="timeline-description">
 							Founded and operated a successful web development company, managed client relationships,
-							led project planning and execution, and delivered custom web solutions for 25+ clients.
+							led project planning and execution, and delivered custom web solutions for 5+ clients.
 							Built a team of 5 developers and achieved 200% revenue growth year-over-year.
 						</p>
 					</div>
@@ -1443,18 +1446,18 @@
 			<div class="projects-grid">
 				<div class="project-card" data-aos="fade-up" data-aos-delay="100">
 					<div class="project-content">
-						<h3 class="project-title">Order & Inventory Management System</h3>
+						<h3 class="project-title">Mechana - ERP for Mechanic Shops</h3>
 						<p class="project-description">
-							A comprehensive business management solution featuring real-time inventory tracking,
-							order processing, supplier management, automated stock alerts, and detailed analytics
-							dashboard for complete business oversight.
+							Currently developing a comprehensive ERP solution specifically designed for mechanic shops.
+							Features include job management, parts inventory, customer management, billing system,
+							and workshop scheduling with mobile-responsive design.
 						</p>
 						<div class="project-tech">
+							<span class="tech-tag">React</span>
 							<span class="tech-tag">Laravel</span>
-							<span class="tech-tag">Vue.js</span>
 							<span class="tech-tag">MySQL</span>
-							<span class="tech-tag">Chart.js</span>
-							<span class="tech-tag">Bootstrap</span>
+							<span class="tech-tag">REST API</span>
+							<span class="tech-tag">In Development</span>
 						</div>
 					</div>
 				</div>
@@ -1479,18 +1482,18 @@
 
 				<div class="project-card" data-aos="fade-up" data-aos-delay="300">
 					<div class="project-content">
-						<h3 class="project-title">Mechana - ERP for Mechanic Shops</h3>
+						<h3 class="project-title">Order & Inventory Management System</h3>
 						<p class="project-description">
-							Currently developing a comprehensive ERP solution specifically designed for mechanic shops.
-							Features include job management, parts inventory, customer management, billing system,
-							and workshop scheduling with mobile-responsive design.
+							A comprehensive business management solution featuring real-time inventory tracking,
+							order processing, supplier management, automated stock alerts, and detailed analytics
+							dashboard for complete business oversight.
 						</p>
 						<div class="project-tech">
-							<span class="tech-tag">React</span>
 							<span class="tech-tag">Laravel</span>
+							<span class="tech-tag">Vue.js</span>
 							<span class="tech-tag">MySQL</span>
-							<span class="tech-tag">REST API</span>
-							<span class="tech-tag">In Development</span>
+							<span class="tech-tag">Chart.js</span>
+							<span class="tech-tag">Bootstrap</span>
 						</div>
 					</div>
 				</div>
@@ -1509,8 +1512,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
 					<div class="contact-info" data-aos="fade-up">
-						<h3 class="mb-5 text-center" style="font-family: 'Orbitron', monospace; color: var(--text-primary);">Get In
-							Touch</h3>
+						<h3 class="mb-5 text-center" style="font-family: 'Orbitron', monospace; color: var(--text-primary);">Get In Touch</h3>
 
 						<div class="row">
 							<div class="col-md-6 mb-4">
@@ -1586,7 +1588,7 @@
 
 	<!-- Back to Top Button -->
 	<button class="back-to-top" id="backToTop">
-		<i class="bi bi-arrow-up"></i>
+		<i class="bi bi-arrow-up small"></i>
 	</button>
 
 	<!-- Bootstrap 5.3.2 JS -->
@@ -1690,11 +1692,11 @@
 		window.addEventListener('scroll', () => {
 			// Skip highlighting updates during programmatic scrolling
 			if (isScrollingProgrammatically) return;
-			
+
 			let current = '';
 			const navbar = document.querySelector('.navbar');
 			const navbarHeight = navbar.offsetHeight;
-			
+
 			sections.forEach(section => {
 				const sectionTop = section.offsetTop - navbarHeight - 50; // Better offset calculation
 				const sectionHeight = section.clientHeight;
@@ -1720,21 +1722,21 @@
 					// Immediately update active link
 					navLinks.forEach(link => link.classList.remove('active'));
 					this.classList.add('active');
-					
+
 					// Calculate navbar height for proper offset
 					const navbar = document.querySelector('.navbar');
 					const navbarHeight = navbar.offsetHeight;
 					const targetPosition = target.offsetTop - navbarHeight - 20; // Extra padding
-					
+
 					// Temporarily disable the active link highlighting during scroll
 					isScrollingProgrammatically = true;
-					
+
 					// Use window.scrollTo for more reliable scrolling
 					window.scrollTo({
 						top: targetPosition,
 						behavior: 'smooth'
 					});
-					
+
 					// Re-enable highlighting after scroll completes
 					setTimeout(() => {
 						isScrollingProgrammatically = false;
